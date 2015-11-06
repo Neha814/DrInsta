@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#80000000" />
+    <corners android:radius="12dp" />
+</shape>
+<!-- From: file:/home/sandeep/Documents/sandeep%20Project%20/live%20working%20app%20/workspace/Drinsta_WS/zoom-common-lib/res/drawable/zm_quick_search_char_bg.xml --><!-- From: file:/home/sandeep/Documents/sandeep%20Project%20/live%20working%20app%20/workspace/Drinsta_WS/zoom-common-lib/build/intermediates/bundles/debug/res/drawable/zm_quick_search_char_bg.xml -->

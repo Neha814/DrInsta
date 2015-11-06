@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="image_text_orientation">
+        <enum name="horizontal" value="0" />
+        <enum name="vertical" value="1" />
+    </attr>
+
+    <declare-styleable name="ZMImageTextButton">
+    	<attr name="zm_image" format="reference" />
+    	<attr name="zmImageTextOrientation" format="integer" />
+    </declare-styleable>
+    
+    <declare-styleable name="ZMBaseTheme">
+    	<attr name="zm_tipAppearance" format="reference" />
+    </declare-styleable>
+    
+    <declare-styleable name="ZMTip">
+    	<attr name="zm_borderColor" format="color" />
+    	<attr name="zm_shadowColor" format="color" />
+    	<attr name="zm_background" format="color|reference" />
+    	<attr name="zm_backgroundColorIfHardwareAccelerated" format="color" />
+    </declare-styleable>
+    
+    <declare-styleable name="ZMIOSStyleTitlebarLayout">
+    	<attr name="zm_leftButton" format="reference" />
+    	<attr name="zm_rightButton" format="reference" />
+    	<attr name="zm_title" format="reference" />
+    </declare-styleable>
+    
+    <declare-styleable name="ZMDynTextSizeTextView">
+    	<attr name="zm_maxReduce" format="dimension" />
+    </declare-styleable>
+</resources>

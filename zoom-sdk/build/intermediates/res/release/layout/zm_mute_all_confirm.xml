@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <CheckBox
+        style="@style/ZMTextView.Normal.OnLight"
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:text="@string/zm_msg_mute_all_allow_unmute_self" />
+    
+</LinearLayout><!-- From: file:/home/sandeep/Documents/sandeep%20Project%20/live%20working%20app%20/workspace/Drinsta_WS/zoom-sdk/res/layout/zm_mute_all_confirm.xml -->

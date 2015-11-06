@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <translate
+    android:duration="@android:integer/config_mediumAnimTime"
+    android:fromYDelta="0%p"
+    android:toYDelta="50%p" />
+</set><!-- From: file:/home/sandeep/Documents/sandeep%20Project%20/live%20working%20app%20/workspace/Drinsta_WS/zoom-common-lib/res/anim/zm_slide_out_dialog.xml --><!-- From: file:/home/sandeep/Documents/sandeep%20Project%20/live%20working%20app%20/workspace/Drinsta_WS/zoom-common-lib/build/intermediates/bundles/debug/res/anim/zm_slide_out_dialog.xml -->

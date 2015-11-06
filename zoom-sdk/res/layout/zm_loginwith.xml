@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="500dp"
+    android:orientation="vertical"
+    android:background="@drawable/zm_window_bg" >
+    
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ZMTitleBar"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/btnSignup"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            style="@style/ZMBackButton" />
+                
+        <Button
+            style="@style/ZMButton.TitleBar"
+            android:id="@+id/btnSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/zm_btn_signup"
+            android:visibility="gone" />
+        
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_title_login" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="30dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp" >
+
+            <!-- Login Zoom -->
+
+            <LinearLayout
+                style="@style/ZMSettingOptionItem.First"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+                android:orientation="horizontal" >
+                
+                <EditText
+                    style="@style/ZMEditText.NoBorder"
+                    android:id="@+id/edtUserName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/zm_hint_zoom_account"
+                    android:inputType="textEmailAddress"
+                    android:gravity="center"
+                    android:maxLength="128" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                style="@style/ZMSettingOptionItem.Last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <EditText
+                    style="@style/ZMEditText.NoBorder"
+                    android:id="@+id/edtPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/zm_hint_zoom_pwd"
+                    android:inputType="textPassword"
+                    android:maxLength="32"
+                    android:selectAllOnFocus="true"
+                    android:gravity="center" />
+                
+            </LinearLayout>
+            
+            <Button
+                style="@style/ZMButton.HappyPath"
+                android:id="@+id/btnLoginZoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/zm_btn_login" />
+            
+            <Button
+                android:id="@+id/linkForgetPassword"
+                style="@style/ZMButton.NoBackground.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/zm_lbl_forget_password" />
+            
+            <!-- Divider -->
+
+            <TextView
+                android:id="@+id/panelLoginViaDivider"
+                style="@style/ZMTextView.Medium.Dimmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="14dp"
+                android:layout_gravity="left"
+                android:text="@string/zm_lbl_or_sign_in_with" />
+
+            <!-- Google and Facebook -->
+            <LinearLayout
+                android:id="@+id/panelActions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:id="@+id/btnLoginGoogle"
+                    style="@style/ZMSettingOptionButton.First"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/zm_ic_other_contacts_google" />
+
+                    <TextView
+                        style="@style/ZMSettingOptionButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/zm_login_with_google" />
+                    
+                    <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:duplicateParentState="true"
+	                    android:src="@drawable/zm_next_arrow" />
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnLoginFacebook"
+                    style="@style/ZMSettingOptionButton.Center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/zm_ic_other_contacts_fb" />
+
+                    <TextView
+                        style="@style/ZMSettingOptionButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/zm_login_with_facebook" />
+                    
+                    <ImageView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:duplicateParentState="true"
+	                    android:src="@drawable/zm_next_arrow" />
+                    
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linkSSOLogin"
+                    style="@style/ZMSettingOptionButton.Last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/zm_icon_sso" />
+
+                    <TextView
+                        style="@style/ZMSettingOptionButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:gravity="left"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/zm_login_with_sso" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/zm_next_arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+            
+        </LinearLayout>
+     
+    </ScrollView>
+    
+</LinearLayout>
+

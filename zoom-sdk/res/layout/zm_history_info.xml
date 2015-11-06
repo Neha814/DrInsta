@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/btnDelete"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/zm_btn_mymeetings" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            style="@style/ZMButton.TitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:text="@string/zm_btn_delete" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_title_meeting_info" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <ScrollView
+        android:id="@+id/panelInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <!-- Meeting topic -->
+
+            <LinearLayout
+                style="@style/ZMSettingOptionItem.First"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <!--
+                 Use a readonly EditText instead of a TextView here to grab default focus in order to
+                 avoid the panelInfo ScrollView being scrolled to bottom by default.
+                -->
+                <EditText
+                    style="@style/ZMTextView.Large.OnLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zm_lbl_topic"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:inputType="none" />
+
+                <TextView
+                    style="@style/ZMTextView.Medium.Dimmed"
+                    android:id="@+id/txtTopic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|right"
+                    android:text="Reed Yang's meeting" />
+            
+            </LinearLayout>
+            
+            <!-- Meeting ID -->
+
+            <LinearLayout
+                style="@style/ZMSettingOptionItem.Center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <TextView
+                    style="@style/ZMTextView.Large.OnLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zm_lbl_meeting_id2" />
+
+                <TextView
+                    style="@style/ZMTextView.Medium.Dimmed"
+                    android:id="@+id/txtMeetingId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|right"
+                    android:text="123 456 789" />
+            
+            </LinearLayout>
+            
+            <!-- When -->
+
+            <LinearLayout
+                style="@style/ZMSettingOptionItem.Center"
+                android:id="@+id/panelWhen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <TextView
+                    style="@style/ZMTextView.Large.OnLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zm_lbl_when" />
+
+                <TextView
+                    style="@style/ZMTextView.Medium.Dimmed"
+                    android:id="@+id/txtWhen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|right"
+                    android:text="2012/11/22 13:48" />
+            
+            </LinearLayout>
+            
+            <!-- Duration -->
+
+            <LinearLayout
+                style="@style/ZMSettingOptionItem.Last"
+                android:id="@+id/panelDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <TextView
+                    style="@style/ZMTextView.Large.OnLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zm_lbl_duration" />
+
+                <TextView
+                    style="@style/ZMTextView.Medium.Dimmed"
+                    android:id="@+id/txtDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|right"
+                    android:text="60 minutes" />
+            
+            </LinearLayout>
+            
+            <TextView
+                style="@style/ZMTextView.Large.OnLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/zm_lbl_participants" />
+            
+            <com.zipow.videobox.view.HistoryParticipantsListView
+                android:id="@+id/participantsListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/zm_window_bg" >
+
+    <RelativeLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/zm_title_setting" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_title_setting_messenger" />
+    </RelativeLayout>
+    
+    <ScrollView
+        android:id="@+id/panelOptions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zm_window_bg" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp">
+            
+            <CheckedTextView
+                android:id="@+id/chkEnableAddrBook"
+                style="@style/ZMSettingOptionItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+                android:paddingTop="4dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="4dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="left|center_vertical"
+                android:text="@string/zm_lbl_enable_address_book"
+                android:visibility="gone" />
+            
+            <LinearLayout
+                android:id="@+id/optionAlertImMsg"
+                style="@style/ZMSettingOptionItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                android:gravity="left|center_vertical" >
+             
+                <TextView
+                    style="@style/ZMSettingOptionItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/zm_lbl_alert_me_for_im_message" />
+
+                <CheckedTextView
+                    android:id="@+id/chkAlertImMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkMark="@drawable/zm_btn_toggle_default" />
+             
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/panelAlertOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            
+                <LinearLayout
+                    android:id="@+id/optionAlertSound"
+                    style="@style/ZMSettingOptionItem.First"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="0dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="0dp" >
+
+                    <TextView
+                        style="@style/ZMSettingOptionItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_lbl_alert_sound" />
+
+                    <CheckedTextView
+                        android:id="@+id/chkAlertSound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkMark="@drawable/zm_btn_toggle_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionAlertVibrate"
+                    style="@style/ZMSettingOptionItem.Last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="0dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="0dp" >
+
+                    <TextView
+                        style="@style/ZMSettingOptionItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/zm_lbl_alert_vibrate" />
+
+                    <CheckedTextView
+                        android:id="@+id/chkAlertVibrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkMark="@drawable/zm_btn_toggle_default" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/ZMTextView.Normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/zm_lbl_alert_option_desc" />
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/optionShowOfflineBuddies"
+                style="@style/ZMSettingOptionItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                android:gravity="left|center_vertical">
+             
+                <TextView
+                    style="@style/ZMSettingOptionItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/zm_lbl_show_offline_buddies" />
+
+                <CheckedTextView
+                    android:id="@+id/chkShowOfflineBuddies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkMark="@drawable/zm_btn_toggle_default" />
+             
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout><!-- From: file:/home/sandeep/Documents/sandeep%20Project%20/live%20working%20app%20/workspace/Drinsta_WS/zoom-sdk/res/layout/zm_setting_messenger.xml -->

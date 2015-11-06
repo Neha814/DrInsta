@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:orientation="vertical" >
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/viewRight"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+        
+        <View
+            android:id="@+id/viewRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_title_schedule_or_host_a_meeting" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zm_window_bg" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_window_bg"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp" >
+            
+            <LinearLayout
+                android:id="@+id/optionVideoOn"
+                style="@style/ZMSettingOptionButton.First"
+                android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                    style="@style/ZMSettingOptionButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/zm_lbl_video_on" />
+
+                <CheckedTextView
+                    android:id="@+id/chkVideoOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkMark="@drawable/zm_btn_toggle_default" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/optionUsePMI"
+                style="@style/ZMSettingOptionButton.Center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingRight="4dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                    style="@style/ZMSettingOptionButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/zm_lbl_use_pmi" />
+
+                <CheckedTextView
+                    android:id="@+id/chkUsePMI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkMark="@drawable/zm_btn_toggle_default" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/btnPMI"
+                style="@style/ZMSettingOptionButton.Center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:weightSum="1" >
+
+                <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                    style="@style/ZMSettingOptionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:focusable="false"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/zm_lbl_pmi_abbr" />
+
+                <TextView
+                    android:id="@+id/txtPMI"
+                    style="@style/ZMTextView.Medium.Dimmed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:text="111-111-1111" />
+                
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/zm_next_arrow" />
+            
+            </LinearLayout>
+            
+            <LinearLayout
+                style="@style/ZMSettingOptionButton.Last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:clickable="false"
+                android:focusable="false" >
+
+                <Button
+                    style="@style/ZMButton.HappyPath"
+                    android:id="@+id/btnStartMeeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zm_btn_start_a_meeting"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/btnUpcomingMeetings"
+                style="@style/ZMSettingOptionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:weightSum="1" >
+
+                <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                    style="@style/ZMButton.NoBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:focusable="false"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/zm_btn_upcoming_meetings" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/zm_next_arrow" />
+            
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/btnScheduleMeeting"
+                style="@style/ZMSettingOptionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:weightSum="1" >
+
+                <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                    style="@style/ZMButton.NoBackground"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="0dp"
+                    android:clickable="false"
+                    android:duplicateParentState="true"
+                    android:focusable="false"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/zm_btn_schedule_a_meeting" />
+            
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/zm_next_arrow" />
+                
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="200dp"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/share_image"
+        style="@style/ZMSettingOptionButton.NoLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="left|center_vertical"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:text="@string/zm_btn_share_image" />
+
+    <TextView
+        android:id="@+id/share_url"
+        style="@style/ZMSettingOptionButton.NoLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="left|center_vertical"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:text="@string/zm_btn_share_url" />
+    
+	<TextView
+        android:id="@+id/share_from_bookmark"
+        style="@style/ZMSettingOptionButton.NoLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="left|center_vertical"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:text="@string/zm_btn_share_from_bookmark" />
+
+</LinearLayout><!-- From: file:/home/sandeep/Documents/sandeep%20Project%20/live%20working%20app%20/workspace/Drinsta_WS/zoom-sdk/res/layout/zm_share_tip.xml -->
